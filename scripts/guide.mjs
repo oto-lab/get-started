@@ -33,12 +33,79 @@ const lessons = readdirSync(outDir, { withFileTypes: true })
   .map((e) => e.name)
   .sort();
 
+/**
+ * Run one lesson's tests with live output, and also collect the
+ * failures via the JSON reporter so they can be re-printed at the
+ * end (the live output scrolls away too fast to read).
+ */
 function runLesson(lesson) {
-  const result = spawnSync(process.execPath, [vitestBin, "run", lesson], {
-    cwd: root,
-    stdio: "inherit",
-  });
-  return result.status === 0;
+  const reportFile = join(tmpdir(), `purus-get-started-guide-run-${Date.now()}.json`);
+  const result = spawnSync(
+    process.execPath,
+    [
+      vitestBin,
+      "run",
+      lesson,
+      "--reporter=default",
+      "--reporter=json",
+      `--outputFile=${reportFile}`,
+    ],
+    {
+      cwd: root,
+      encoding: "utf8",
+      env: { ...process.env, FORCE_COLOR: "1" },
+    },
+  );
+  const passed = result.status === 0;
+
+  // Relay the live output, minus the JSON-reporter noise line.
+  const output = `${result.stdout ?? ""}${result.stderr ?? ""}`
+    .split("\n")
+    .filter((line) => !line.includes("JSON report written to"))
+    .join("\n");
+  process.stdout.write(output);
+
+  const failures = [];
+  if (!passed && existsSync(reportFile)) {
+    try {
+      const report = JSON.parse(readFileSync(reportFile, "utf8"));
+      for (const file of report.testResults ?? []) {
+        for (const assertion of file.assertionResults ?? []) {
+          if (assertion.status !== "failed") continue;
+          const raw = String(assertion.failureMessages?.[0] ?? "");
+          const message = raw
+            .replace(/\u001b\[[0-9;]*m/g, "") // strip ANSI colors
+            .split("\n")
+            .filter((line) => {
+              const t = line.trim();
+              return t && !t.startsWith("at ") && !t.startsWith("❯");
+            })
+            .slice(0, 6)
+            .join("\n      ");
+          failures.push({ title: assertion.title, message });
+        }
+      }
+    } catch {
+      // JSON parse failed — the live output above still has the details
+    }
+  }
+  rmSync(reportFile, { force: true });
+  return { passed, failures };
+}
+
+function printFailures(failures) {
+  if (failures.length === 0) return;
+  console.log("");
+  console.log("─".repeat(60));
+  console.log(
+    ja ? `❌ 失敗したテスト（${failures.length} 件）:` : `❌ Failed tests (${failures.length}):`,
+  );
+  for (const failure of failures) {
+    console.log("");
+    console.log(`  × ${failure.title}`);
+    if (failure.message) console.log(`      ${failure.message}`);
+  }
+  console.log("─".repeat(60));
 }
 
 /** Quietly run everything once to find the first incomplete lesson. */
@@ -117,7 +184,8 @@ while (index < lessons.length) {
   const lesson = lessons[index];
   banner(index);
 
-  if (runLesson(lesson)) {
+  const { passed, failures } = runLesson(lesson);
+  if (passed) {
     console.log("");
     console.log(
       ja ? `✅ ${lesson} クリア！次のレッスンへ進みます…` : `✅ ${lesson} complete! Moving on…`,
@@ -128,6 +196,8 @@ while (index < lessons.length) {
     }
     continue;
   }
+
+  printFailures(failures);
 
   console.log("");
   console.log(
