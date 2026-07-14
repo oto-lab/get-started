@@ -1,0 +1,14 @@
+-- Lesson 03: 文字列
+--
+-- 文字列の中で [式] と書くと、式の値を埋め込めます（補間）。
+--
+--   const name be //;Alice;//
+--   const msg be //;Hi, [name]!;//   → "Hi, Alice!"
+
+const name be //;World;//
+
+-- TODO: 補間を使って greeting を //;Hello, World!;// にしましょう。
+--       ヒント: [name] を文字列の中に書きます
+const greeting be //;???;//
+
+console.log[greeting]

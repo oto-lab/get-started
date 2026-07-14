@@ -1,0 +1,14 @@
+-- Lesson 03: Strings
+--
+-- Write [expr] inside a string to embed a value (interpolation).
+--
+--   const name be //;Alice;//
+--   const msg be //;Hi, [name]!;//   → "Hi, Alice!"
+
+const name be //;World;//
+
+-- TODO: Use interpolation so greeting becomes Hello, World!
+--       Hint: put [name] inside the string
+const greeting be //;???;//
+
+console.log[greeting]

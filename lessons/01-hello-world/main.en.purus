@@ -1,0 +1,8 @@
+-- Lesson 01: Hello, World
+--
+-- Strings are written as //;text;//.
+-- Function calls use [] instead of ().
+--
+-- TODO: Change //;???;// so it prints: Hello, Purus!
+
+console.log[//;???;//]

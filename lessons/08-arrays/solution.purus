@@ -1,0 +1,9 @@
+const numbers be [10, 20, 30]
+
+const first be numbers[\0]
+
+const digits be [0..4]
+
+const colors be [//;red;//, //;blue;//]
+
+const [first-color; second-color] be colors

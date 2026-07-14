@@ -1,0 +1,5 @@
+const cat be [name be //;Tama;//, age be 3]
+
+const object[name; age] be cat
+
+console.log[//;[name] is [age] years old;//]

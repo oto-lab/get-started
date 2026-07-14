@@ -1,0 +1,11 @@
+-- Lesson 02: Variables
+--
+-- Variables are declared with const / let, using `be` instead of `=`.
+-- Use compound assignment like `add be` (+=) to update them.
+
+-- TODO 1: Make the constant `language` hold the string Purus.
+const language be //;???;//
+
+-- TODO 2: Add 10 to `count` using compound assignment.
+--         Hint: count add be 10
+let count be 0

@@ -1,0 +1,11 @@
+-- Lesson 02: 変数
+--
+-- 変数は const / let で宣言し、= の代わりに be を使います。
+-- 再代入には複合代入 `add be` (+=) などを使います。
+
+-- TODO 1: 定数 language の値を //;Purus;// にしましょう。
+const language be //;???;//
+
+-- TODO 2: count に複合代入を使って 10 を足しましょう。
+--         ヒント: count add be 10
+let count be 0

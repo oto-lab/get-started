@@ -1,0 +1,17 @@
+-- Lesson 04: 演算子
+--
+-- Purus は記号ではなくキーワードの演算子を使います:
+--
+--   add (+)   sub (-)   mul (*)   div (/)   mod (%)   pow (**)
+--
+--   例:  7 add 3  → 10
+
+const a be 7
+const b be 3
+
+-- TODO: 0 を正しい式に書き換えましょう。
+const sum be 0        -- a と b の和
+const difference be 0 -- a と b の差
+const product be 0    -- a と b の積
+const remainder be 0  -- a を b で割った余り
+const power be 0      -- a の b 乗

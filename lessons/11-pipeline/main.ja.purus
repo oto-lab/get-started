@@ -1,0 +1,17 @@
+-- Lesson 11: パイプラインと Null 合体
+--
+-- pipe は値を関数に渡します:  5 pipe double  → double(5)
+-- 左から右へ読めます:         5 pipe double pipe increment
+-- coal は左辺が null / undefined のとき右辺を返します:
+--   config.port coal 3000  → config.port ?? 3000
+
+fn double x to return x mul 2
+fn increment x to return x add 1
+
+-- TODO 1: 5 を double → increment の順に pipe で流しましょう（11 になります）。
+const result be 0
+
+const config-port be null
+
+-- TODO 2: coal を使って、config-port が null のとき port が 3000 になるようにしましょう。
+const port be 0

@@ -1,0 +1,6 @@
+async fn slow-double x
+  return x mul 2
+
+async fn compute x
+  const doubled be await slow-double[x]
+  return doubled add 1

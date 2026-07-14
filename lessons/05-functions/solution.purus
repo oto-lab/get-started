@@ -1,0 +1,4 @@
+fn double x to return x mul 2
+
+fn add-nums a; b
+  return a add b

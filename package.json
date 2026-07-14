@@ -1,0 +1,32 @@
+{
+  "name": "get-started",
+  "version": "1.0.0",
+  "description": "A [Purus](https://purus.work) project.",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "guide": "node scripts/guide.mjs",
+    "progress": "node scripts/progress.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:solutions": "vitest run --mode solutions",
+    "purus": "purus",
+    "build": "purus build",
+    "compile": "purus compile",
+    "exec": "purus run",
+    "format": "prettier --write ./src",
+    "lint": "purus-lint"
+  },
+  "devDependencies": {
+    "@puruslang/linter": "^1.0.1",
+    "@puruslang/prettier-plugin-purus": "^1.0.1",
+    "prettier": "^3.9.4",
+    "purus": "^1.0.0"
+  },
+  "dependencies": {
+    "vitest": "^4.1.10"
+  }
+}

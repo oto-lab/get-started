@@ -1,0 +1,17 @@
+-- Lesson 04: Operators
+--
+-- Purus uses keyword operators instead of symbols:
+--
+--   add (+)   sub (-)   mul (*)   div (/)   mod (%)   pow (**)
+--
+--   e.g.  7 add 3  → 10
+
+const a be 7
+const b be 3
+
+-- TODO: Replace each 0 with the correct expression.
+const sum be 0        -- a plus b
+const difference be 0 -- a minus b
+const product be 0    -- a times b
+const remainder be 0  -- remainder of a divided by b
+const power be 0      -- a to the power of b

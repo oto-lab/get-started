@@ -1,0 +1,8 @@
+const a be 7
+const b be 3
+
+const sum be a add b
+const difference be a sub b
+const product be a mul b
+const remainder be a mod b
+const power be a pow b

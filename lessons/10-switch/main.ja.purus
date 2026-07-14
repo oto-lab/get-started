@@ -1,0 +1,12 @@
+-- Lesson 10: スイッチ
+--
+-- switch 値
+--   case 値 then 文        … 値が一致したら実行
+--   case blank then 文     … どれにも一致しないとき（ワイルドカード）
+
+-- TODO: greet-in に次の 2 つの case を追加しましょう:
+--   case //;ja;//  → console.log[//;Konnichiwa;//]
+--   case blank     → console.log[//;Unknown language;//]
+fn greet-in lang
+  switch lang
+    case //;en;// then console.log[//;Hello;//]

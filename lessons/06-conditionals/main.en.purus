@@ -1,0 +1,13 @@
+-- Lesson 06: Conditionals
+--
+-- Blocks are made with if / elif / else and indentation (no braces).
+--
+-- Comparison operators:
+--   eq (===)   neq (!==)   lt (<)   gt (>)   le (<=)   ge (>=)
+
+-- TODO: Make sign x return:
+--   x gt 0  → //;positive;//
+--   x eq 0  → //;zero;//
+--   otherwise → //;negative;//
+fn sign x
+  return //;???;//

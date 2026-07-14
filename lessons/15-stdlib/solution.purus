@@ -1,0 +1,8 @@
+use p-math as m
+use p-array as arr
+
+const rounded be m.round[3.7]
+
+const biggest be m.max[3; 1; 4]
+
+const total be arr.sum[[1, 2, 3]]

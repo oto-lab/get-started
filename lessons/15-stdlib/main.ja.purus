@@ -1,0 +1,17 @@
+-- Lesson 15: 標準ライブラリ
+--
+-- `use` は Purus 組み込みの標準ライブラリを読み込みます。
+-- モジュール名には p- の接頭辞が付きます: p-math, p-array, p-string, ...
+-- `as` で短い名前を付けられます。
+
+use p-math as m
+use p-array as arr
+
+-- TODO 1: m.round で 3.7 を四捨五入しましょう。
+const rounded be 0
+
+-- TODO 2: m.max で 3, 1, 4 の最大値を求めましょう（引数は ; で区切る）。
+const biggest be 0
+
+-- TODO 3: arr.sum で配列 [1, 2, 3] の合計を求めましょう。
+const total be 0

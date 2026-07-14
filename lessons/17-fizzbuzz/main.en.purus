@@ -1,0 +1,17 @@
+-- Lesson 17: FizzBuzz — Capstone
+--
+-- The final challenge! Combine everything you've learned:
+-- functions, conditionals, mod, string interpolation, and loops.
+--
+-- Rules:
+--   multiple of 15 → //;FizzBuzz;//
+--   multiple of 3  → //;Fizz;//
+--   multiple of 5  → //;Buzz;//
+--   otherwise      → the number as a string, e.g. //;[n];//
+
+-- TODO 1: Implement fizzbuzz following the rules above.
+fn fizzbuzz n
+  return //;???;//
+
+-- TODO 2: Loop n from 1 to 15 and print fizzbuzz[n] for each.
+--         Hint: for n in [1..15]

@@ -1,0 +1,8 @@
+fn count-up limit
+  let i be 1
+  while i le limit
+    yield i
+    i add be 1
+
+for v in count-up[3]
+  console.log[v]

@@ -1,0 +1,13 @@
+-- Lesson 06: 条件分岐
+--
+-- if / elif / else とインデントでブロックを作ります（{} は不要）。
+--
+-- 比較演算子:
+--   eq (===)   neq (!==)   lt (<)   gt (>)   le (<=)   ge (>=)
+
+-- TODO: sign x が次を返すようにしましょう:
+--   x gt 0  → //;positive;//
+--   x eq 0  → //;zero;//
+--   その他  → //;negative;//
+fn sign x
+  return //;???;//

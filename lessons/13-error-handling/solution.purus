@@ -1,0 +1,10 @@
+fn safe-divide a; b
+  if b eq 0
+    throw new Error[//;division by zero;//]
+  return a div b
+
+fn try-divide a; b
+  try
+    return safe-divide[a; b]
+  catch e
+    return //;error: [e.message];//

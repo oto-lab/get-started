@@ -1,0 +1,17 @@
+-- Lesson 07: ループ
+--
+-- while 条件            … 条件が true の間くり返す
+-- for item in list      … リストの要素を順にたどる
+-- total add be i        … total += i（複合代入で更新）
+
+-- TODO 1: sum-up n が 1 から n までの合計を返すようにしましょう。
+--         ヒント: let i be 1 して、while i le n の中で
+--         total add be i と i add be 1
+fn sum-up n
+  let total be 0
+  return total
+
+const fruits be [//;apple;//, //;banana;//, //;cherry;//]
+
+-- TODO 2: for-in で fruits を 1 行ずつ出力しましょう。
+--         ヒント: for fruit in fruits

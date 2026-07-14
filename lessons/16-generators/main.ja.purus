@@ -1,0 +1,12 @@
+-- Lesson 16: ジェネレータ
+--
+-- `yield` を含む関数は自動的にジェネレータ（JS の function*）になります。
+-- yield するたびに値を 1 つ渡し、呼び出し側は for-in で順に受け取れます。
+
+-- TODO: count-up が 1, 2, ..., limit を順に yield するようにしましょう。
+--       ヒント: let i be 1 して、while i le limit の中で yield i と i add be 1
+fn count-up limit
+  yield 0
+
+for v in count-up[3]
+  console.log[v]

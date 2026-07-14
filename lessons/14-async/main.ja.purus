@@ -1,0 +1,12 @@
+-- Lesson 14: 非同期処理 (async / await)
+--
+-- async fn は非同期関数を宣言します（Promise を返します）。
+-- await は async 関数の中で Promise の完了を待ちます。
+
+async fn slow-double x
+  return x mul 2
+
+-- TODO: compute が slow-double[x] を await し、結果に 1 を足すようにしましょう。
+--       compute[5] の結果は 11 になります。
+async fn compute x
+  return 0

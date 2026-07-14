@@ -1,0 +1,8 @@
+fn double x to return x mul 2
+fn increment x to return x add 1
+
+const result be 5 pipe double pipe increment
+
+const config-port be null
+
+const port be config-port coal 3000

@@ -1,0 +1,7 @@
+fn sign x
+  if x gt 0
+    return //;positive;//
+  elif x eq 0
+    return //;zero;//
+  else
+    return //;negative;//

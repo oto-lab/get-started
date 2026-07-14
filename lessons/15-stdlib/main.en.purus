@@ -1,0 +1,17 @@
+-- Lesson 15: Standard Library
+--
+-- `use` imports Purus's built-in standard library modules.
+-- Module names are prefixed with p- : p-math, p-array, p-string, ...
+-- `as` gives the module a short name.
+
+use p-math as m
+use p-array as arr
+
+-- TODO 1: Round 3.7 to the nearest integer with m.round.
+const rounded be 0
+
+-- TODO 2: Get the largest of 3, 1, 4 with m.max (separate args with ;).
+const biggest be 0
+
+-- TODO 3: Sum the array [1, 2, 3] with arr.sum.
+const total be 0

@@ -1,0 +1,21 @@
+-- Lesson 08: 配列
+--
+-- 配列リテラル: [1, 2, 3]
+-- 要素アクセスは \ を付ける: arr[\0]  → arr[0]  (\ が無いと関数呼び出し扱い)
+-- 範囲リテラル: [0..4] → [0, 1, 2, 3, 4]
+-- 分割代入:     const [x; y] be arr
+
+const numbers be [10, 20, 30]
+
+-- TODO 1: numbers の最初の要素を取り出しましょう。
+const first be 0
+
+-- TODO 2: 範囲リテラルで [0, 1, 2, 3, 4] を作りましょう。
+const digits be []
+
+const colors be [//;red;//, //;blue;//]
+
+-- TODO 3: 下の 2 行を消して、分割代入 1 行で書き換えましょう。
+--         ヒント: const [first-color; second-color] be colors
+const first-color be //;???;//
+const second-color be //;???;//

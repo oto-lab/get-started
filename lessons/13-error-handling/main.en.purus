@@ -1,0 +1,13 @@
+-- Lesson 13: Error Handling
+--
+-- throw new Error[//;message;//]   … raise an error
+-- try / catch e / finally         … handle errors (indented blocks)
+
+-- TODO 1: When b eq 0, throw new Error[//;division by zero;//]
+fn safe-divide a; b
+  return a div b
+
+-- TODO 2: Wrap the call in try/catch. On error,
+--         return //;error: [e.message];// from the catch block.
+fn try-divide a; b
+  return safe-divide[a; b]

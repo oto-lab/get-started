@@ -1,0 +1,16 @@
+-- Lesson 12: クラス
+--
+-- class 名前 + インデントで本体を書きます。`fn new` がコンストラクタです。
+-- メソッドはクラスの中に普通の fn として書きます。
+-- インスタンス生成は: new 名前[引数]
+
+class Counter
+  fn new start
+    this.value be start
+
+  -- TODO 1: this.value に 1 を足す `increment` メソッドを追加しましょう。
+  --         ヒント: this.value add be 1
+
+  -- TODO 2: //;Count: [this.value];// を返す `describe` メソッドを追加しましょう。
+
+const counter be new Counter[10]

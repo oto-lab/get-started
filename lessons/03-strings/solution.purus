@@ -1,0 +1,5 @@
+const name be //;World;//
+
+const greeting be //;Hello, [name]!;//
+
+console.log[greeting]

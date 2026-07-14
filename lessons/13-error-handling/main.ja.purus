@@ -1,0 +1,13 @@
+-- Lesson 13: エラー処理
+--
+-- throw new Error[//;message;//]   … エラーを投げる
+-- try / catch e / finally         … エラーを処理する（インデントブロック）
+
+-- TODO 1: b eq 0 のとき throw new Error[//;division by zero;//] しましょう。
+fn safe-divide a; b
+  return a div b
+
+-- TODO 2: 呼び出しを try/catch で包み、エラー時は catch ブロックで
+--         //;error: [e.message];// を返しましょう。
+fn try-divide a; b
+  return safe-divide[a; b]

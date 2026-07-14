@@ -1,0 +1,16 @@
+-- Lesson 12: Classes
+--
+-- class Name + indented body. `fn new` is the constructor.
+-- Methods are plain fn declarations inside the class.
+-- Create instances with: new Name[args]
+
+class Counter
+  fn new start
+    this.value be start
+
+  -- TODO 1: Add an `increment` method that adds 1 to this.value.
+  --         Hint: this.value add be 1
+
+  -- TODO 2: Add a `describe` method that returns //;Count: [this.value];//
+
+const counter be new Counter[10]

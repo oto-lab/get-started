@@ -1,0 +1,17 @@
+-- Lesson 07: Loops
+--
+-- while cond            … repeat while cond is true
+-- for item in list      … iterate over a list
+-- total add be i        … total += i (update with compound assignment)
+
+-- TODO 1: Make sum-up return the sum of 1 through n.
+--         Hint: let i be 1, then inside while i le n do
+--         total add be i and i add be 1
+fn sum-up n
+  let total be 0
+  return total
+
+const fruits be [//;apple;//, //;banana;//, //;cherry;//]
+
+-- TODO 2: Print each fruit on its own line with for-in.
+--         Hint: for fruit in fruits

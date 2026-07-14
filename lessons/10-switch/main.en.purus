@@ -1,0 +1,12 @@
+-- Lesson 10: Switch
+--
+-- switch value
+--   case v then stmt       … runs when value matches v
+--   case blank then stmt   … fallback when nothing matches (wildcard)
+
+-- TODO: Add these two cases to greet-in:
+--   case //;ja;//  → console.log[//;Konnichiwa;//]
+--   case blank     → console.log[//;Unknown language;//]
+fn greet-in lang
+  switch lang
+    case //;en;// then console.log[//;Hello;//]

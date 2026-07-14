@@ -1,0 +1,13 @@
+-- Lesson 16: Generators
+--
+-- A function containing `yield` automatically becomes a generator
+-- (JS function*). Each yield hands out one value; the caller can
+-- iterate over them with for-in.
+
+-- TODO: Make count-up yield 1, 2, ..., limit in order.
+--       Hint: let i be 1, then while i le limit: yield i and i add be 1
+fn count-up limit
+  yield 0
+
+for v in count-up[3]
+  console.log[v]

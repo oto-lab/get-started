@@ -1,0 +1,8 @@
+-- Lesson 01: Hello, World
+--
+-- Purus の文字列は //;text;// と書きます。
+-- 関数呼び出しは () ではなく [] を使います。
+--
+-- TODO: //;???;// を書き換えて Hello, Purus! と出力しましょう。
+
+console.log[//;???;//]

@@ -1,0 +1,12 @@
+-- Lesson 05: 関数
+--
+-- 1行関数:      fn 名前 引数 to return 式
+-- ブロック関数: fn 名前 引数1; 引数2 のあとにインデントで本体を書く
+-- 呼び出し:     名前[引数1; 引数2]
+
+-- TODO 1: double が x の 2 倍を返すようにしましょう。
+fn double x to return x
+
+-- TODO 2: add-nums が a と b の和を返すようにしましょう。
+fn add-nums a; b
+  return 0

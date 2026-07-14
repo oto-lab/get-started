@@ -1,0 +1,14 @@
+-- Lesson 09: Objects
+--
+-- Object literal:  [key be value, key2 be value2]
+-- Property access: obj.key
+-- Destructuring:   const object[key1; key2] be obj
+-- Empty object:    [be]
+
+-- TODO: Make cat an object with name //;Tama;// and age 3.
+const cat be [be]
+
+-- Destructuring (this line already works)
+const object[name; age] be cat
+
+console.log[//;[name] is [age] years old;//]

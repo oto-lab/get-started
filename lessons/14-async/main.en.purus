@@ -1,0 +1,12 @@
+-- Lesson 14: Async / Await
+--
+-- async fn declares an async function (it returns a Promise).
+-- await waits for a Promise inside an async function.
+
+async fn slow-double x
+  return x mul 2
+
+-- TODO: Make compute await slow-double[x], then add 1 to the result.
+--       compute[5] should resolve to 11.
+async fn compute x
+  return 0

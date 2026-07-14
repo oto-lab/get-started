@@ -1,0 +1,17 @@
+-- Lesson 11: Pipeline & Nullish Coalescing
+--
+-- pipe passes a value to a function:  5 pipe double  → double(5)
+-- Chains read left to right:          5 pipe double pipe increment
+-- coal returns the right side when the left is null / undefined:
+--   config.port coal 3000  → config.port ?? 3000
+
+fn double x to return x mul 2
+fn increment x to return x add 1
+
+-- TODO 1: Pipe 5 through double, then increment (should become 11).
+const result be 0
+
+const config-port be null
+
+-- TODO 2: Use coal so port falls back to 3000 when config-port is null.
+const port be 0

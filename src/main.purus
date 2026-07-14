@@ -1,0 +1,4 @@
+-- main.purus
+
+const message be ///Hello, World///
+console.log[message]

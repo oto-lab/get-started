@@ -1,0 +1,11 @@
+class Counter
+  fn new start
+    this.value be start
+
+  fn increment
+    this.value add be 1
+
+  fn describe
+    return //;Count: [this.value];//
+
+const counter be new Counter[10]

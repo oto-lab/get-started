@@ -1,0 +1,14 @@
+-- Lesson 09: オブジェクト
+--
+-- オブジェクトリテラル: [key be value, key2 be value2]
+-- プロパティアクセス:   obj.key
+-- 分割代入:             const object[key1; key2] be obj
+-- 空オブジェクト:       [be]
+
+-- TODO: cat を name be //;Tama;//, age be 3 のオブジェクトにしましょう。
+const cat be [be]
+
+-- 分割代入（この行はこのままで動きます）
+const object[name; age] be cat
+
+console.log[//;[name] is [age] years old;//]

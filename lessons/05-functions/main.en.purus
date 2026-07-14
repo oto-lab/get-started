@@ -1,0 +1,12 @@
+-- Lesson 05: Functions
+--
+-- One-liner:   fn name arg to return expr
+-- Block body:  fn name a; b + indented body
+-- Call:        name[arg1; arg2]
+
+-- TODO 1: Make double return x times 2.
+fn double x to return x
+
+-- TODO 2: Make add-nums return the sum of a and b.
+fn add-nums a; b
+  return 0

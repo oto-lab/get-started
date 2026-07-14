@@ -1,0 +1,5 @@
+dist/
+node_modules/
+
+# Learner's working copy, created by `npm start`
+exercises/

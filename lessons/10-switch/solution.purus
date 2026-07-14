@@ -1,0 +1,5 @@
+fn greet-in lang
+  switch lang
+    case //;en;// then console.log[//;Hello;//]
+    case //;ja;// then console.log[//;Konnichiwa;//]
+    case blank then console.log[//;Unknown language;//]

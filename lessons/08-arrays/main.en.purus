@@ -1,0 +1,21 @@
+-- Lesson 08: Arrays
+--
+-- Array literal: [1, 2, 3]
+-- Index access needs \ : arr[\0] → arr[0] (without \ it's a function call)
+-- Range literal: [0..4] → [0, 1, 2, 3, 4]
+-- Destructuring: const [x; y] be arr
+
+const numbers be [10, 20, 30]
+
+-- TODO 1: Get the first element of numbers.
+const first be 0
+
+-- TODO 2: Build [0, 1, 2, 3, 4] with a range literal.
+const digits be []
+
+const colors be [//;red;//, //;blue;//]
+
+-- TODO 3: Delete the two lines below and use one destructuring line instead.
+--         Hint: const [first-color; second-color] be colors
+const first-color be //;???;//
+const second-color be //;???;//
