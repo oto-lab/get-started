@@ -5,7 +5,10 @@ const source = readLesson(import.meta.url);
 
 describe("Lesson 13 — Error Handling", () => {
   it("try-divide[10; 2] is 5 / 正常時は割り算の結果を返す", () => {
-    expect(probe(source, "console.log[try-divide[10; 2]]")[0]).toBe("5");
+    expect(
+      probe(source, "console.log[try-divide[10; 2]]")[0],
+      "エラーが起きないときは safe-divide の結果をそのまま返しましょう / Return safe-divide's result when nothing throws",
+    ).toBe("5");
   });
 
   it('try-divide[10; 0] is "error: division by zero" / 0 除算はエラーメッセージを返す', () => {
@@ -18,7 +21,7 @@ describe("Lesson 13 — Error Handling", () => {
   it("safe-divide[10; 0] throws / safe-divide は 0 除算で throw する", () => {
     expect(
       () => probe(source, "safe-divide[10; 0]"),
-      "b eq 0 のとき throw new Error[...] しましょう / Throw when b eq 0",
+      "b eq 0 のとき throw new Error[//;division by zero;//] しましょう / Throw when b eq 0",
     ).toThrow(/division by zero/);
   });
 });

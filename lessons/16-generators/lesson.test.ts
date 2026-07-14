@@ -11,12 +11,13 @@ describe("Lesson 16 — Generators", () => {
     ).toEqual(["1", "2", "3"]);
   });
 
-  it("count-up[5] yields 1..5", () => {
+  it("count-up[5] yields 1..5 / count-up[5] が 1..5 を yield する", () => {
     expect(
       probe(
         source,
         "const collected be Array.from[count-up[5]]\nconsole.log[collected.join[//;,;//]]",
       )[0],
+      "どんな limit でも動くようにしましょう / It should work for any limit",
     ).toBe("1,2,3,4,5");
   });
 

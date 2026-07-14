@@ -4,10 +4,10 @@ import { readLesson, probe } from "../helper";
 const source = readLesson(import.meta.url);
 
 describe("Lesson 11 — Pipeline & Nullish Coalescing", () => {
-  it("result is 11 (5 pipe double pipe increment)", () => {
+  it("result is 11 / result が 11 になる", () => {
     expect(
       probe(source, "console.log[result]")[0],
-      "5 pipe double pipe increment と書きましょう / Chain with pipe",
+      "5 pipe double pipe increment と書きましょう / Chain with: 5 pipe double pipe increment",
     ).toBe("11");
   });
 
@@ -19,10 +19,10 @@ describe("Lesson 11 — Pipeline & Nullish Coalescing", () => {
     ).toBe(true);
   });
 
-  it("port is 3000 (config-port coal 3000)", () => {
+  it("port is 3000 / port が 3000 になる", () => {
     expect(
       probe(source, "console.log[port]")[0],
-      "config-port coal 3000 と書きましょう / Fall back with coal",
+      "config-port coal 3000 と書きましょう / Fall back with: config-port coal 3000",
     ).toBe("3000");
   });
 
